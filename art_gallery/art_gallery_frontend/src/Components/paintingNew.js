@@ -1,11 +1,11 @@
-import { useState, useEffect } from "react";
+import React, { useState } from "react"; 
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-// import "../CSS/GameNew.css";
+
 
 const API = process.env.REACT_APP_API_URL;
 
-export default function paintingNew() {
+export default function PaintingNew() {
   const navigate = useNavigate();
   const [painting, setPainting] = useState({
     image:"",

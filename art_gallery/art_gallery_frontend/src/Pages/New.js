@@ -1,9 +1,9 @@
-// import GameNew from "../Components/GameNew";
+import PaintingNew from "../Components/paintingNew";
 
 export default function New() {
     return (
         <div className="New">
-            {/* <GameNew /> */}
+            <PaintingNew/>
             <New />
         </div>
     );

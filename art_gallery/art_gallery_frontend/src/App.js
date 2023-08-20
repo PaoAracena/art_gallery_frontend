@@ -1,23 +1,54 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { useState, useEffect } from "react";
+import axios from "axios";
+
+//COMPONENTS
+import NavBar from './Components/NavBar';
+import Paintings from './Components/Paintings';
+
+
+//PAGES
+import Home from './Pages/Home';
+import New from  './Pages/New';
+import Index from "./Pages/Index";
+import Show from './Pages/Show';
+import Edit from './Pages/Edit';
+import FourOFour from './Pages/FourOFour';
+
+
+//BASE URL
+const API = process.env.REACT_APP_API_URL;
+console.log(API)
+
 
 function App() {
+  const [paintings, setPaintings] = useState([]);
+
+  useEffect(() => {
+      axios.get(`${API}/paintings`)
+      .then((response) => {
+          // console.log(response);
+          // console.log("this is the data")
+          // console.log(response.data);
+          setPaintings(response.data);
+
+      })
+      .catch((e) => console.error("catch", e));
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/paintings" element={<Paintings paintings={paintings} />} />
+          <Route path="/paintings/new" element={<New />} />
+          <Route path='/paintings/:index' element={<Show />} />
+          <Route path="/paintings/:index/edit" element={<Edit />} />
+          <Route path="*" element={<FourOFour />} />
+        </Routes>
+      </Router>
     </div>
   );
 }

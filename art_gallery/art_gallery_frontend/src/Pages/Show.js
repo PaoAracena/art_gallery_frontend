@@ -1,9 +1,9 @@
-// import GameDetails from "../Components/GameDetails";
 
+import PaintingDetails from "../Components/paintingDetails";
 export default function Show() {
     return (
         <div className="Show">
-            {/* <GameDetails /> */}
+            <PaintingDetails />
             <Show />
         </div>
     );

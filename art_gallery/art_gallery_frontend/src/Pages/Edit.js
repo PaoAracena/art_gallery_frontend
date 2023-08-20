@@ -1,9 +1,11 @@
-// import GameEdit from "../Components/GameEdit";
+
+import PaintingEdit from "../Components/PaintingEdit"
 
 export default function Edit() {
     return (
         <div className="Edit">
-            {/* <GameEdit /> */}
+
+            <PaintingEdit/>
             < Edit  />
         </div>
     )
