@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import {useState, useEffect} from "react";
+import "../CSS/Paintings.css"
 
 //COMPONENTS
 import SearchBar from "./SearchBar";
@@ -43,10 +44,10 @@ const handleSearchChange = (e) => {
                             </div>
                         ) : (
                 <div className="table-container">
-                    <table>
-                        <thead>
+                    <table className="table">
+                        {/* <thead>
                             <tr>
-                                <th>Url</th>
+                                <th></th>
                                 <th>Name</th>
                                 <th>Painter</th>
                                 <th>Is Artist Alive</th>
@@ -54,16 +55,17 @@ const handleSearchChange = (e) => {
                                 <th>Origin Country</th>
                                 <th>Price</th>
                             </tr>
-                        </thead>
+                        </thead> */}
                         <tbody>
                             {filteredPainting.map((painting, index) => {
                                 return (
-                                    <tr key={index}>
-                                        <td> {painting.image}</td>
+                                    <tr className="card" key={index}>
+                                        <td> <img src={painting.image} className="card-img-top" alt={`${painting.painting}`} />
+                                        </td>
                                         <td>
                                             <Link to={`/paintings/${painting.id}`}>{painting.name}</Link>
                                         </td>
-                                        <td>{painting.artist_name}</td>
+                                        <td>Artist: {painting.artist_name}</td>
                                         <td>
                                         {painting.is_painter_alive ? (
                                             <span>Painter is Alive</span>
@@ -71,8 +73,8 @@ const handleSearchChange = (e) => {
                                             <span>Painter Is Not Alive</span>
                                         )}
                                         </td>
-                                        <td>{painting.country_of_origin}</td>
-                                        <td style={{ textAlign: 'left' }}>{painting.price}</td>
+                                        <td>Country Of Origin: {painting.country_of_origin}</td>
+                                        <td style={{ textAlign: 'left' }}> Price:  {painting.price}</td>
                                     </tr>
                                 );
                             })}

@@ -1,9 +1,9 @@
-import PaintingNew from "../Components/paintingNew";
+import PaintingNew from '../Components/PaintingNew';
 
 export default function New() {
     return (
         <div className="New">
-            <PaintingNew/>
+            <PaintingNew />
             <New />
         </div>
     );

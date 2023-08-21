@@ -1,0 +1,23 @@
+
+
+.card{
+    display: flex;
+    background: #dec1c1;
+    margin: auto;
+    padding: 15px 10px;
+    border: solid 3px gold;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 3;
+  
+  }
+img {
+    border-radius: 4px;
+    width: 400px;
+}
+
+td{
+    /* display: flex; */
+    text-align: center;
+    
+}
