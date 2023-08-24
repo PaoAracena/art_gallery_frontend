@@ -34,7 +34,7 @@ export default function PaintingEdit() {
     };
 
     const handleCheckboxChange = () => {
-        setPainting({ ...painting, painting_year: !painting.painting_year });
+        setPainting({ ...painting, is_painter_alive: !painting.is_painter_alive });
     };
 
     const editPaintings = () => {
@@ -57,9 +57,9 @@ export default function PaintingEdit() {
             <h1> Edit Painting</h1>
             <form onSubmit={handleSubmit}>
        <div className="form_items">
-                <label htmlFor="img">Name:</label>
+                <label htmlFor="img">URL:</label>
                 <input
-                    id="img"
+                    id="image"
                     value={painting.image}
                     type="url"
                     onChange={handleTextChange}
@@ -82,7 +82,7 @@ export default function PaintingEdit() {
             <div className="form_items">
                 <label htmlFor="artist">Painter:</label>
                 <textarea 
-                    id="artist"
+                    id="artist_name"
                     value={painting.artist_name}
                     type="text"
                     placeholder="Artist"
@@ -93,7 +93,7 @@ export default function PaintingEdit() {
             <div className="form_items">
                 <label htmlFor="art">Is The Aristist Alive</label>
                 <input 
-                    id="art"
+                    id="is_painter_alive"
                     type="checkbox"
                     onChange={handleCheckboxChange}
                     checked={painting.is_painter_alive}
@@ -103,7 +103,7 @@ export default function PaintingEdit() {
             <div className="form_items">
                 <label htmlFor="year">Painting Created :</label>
                 <textarea 
-                    id="year"
+                    id="painting_year"
                     value={painting.painting_year}
                     type="text"
                     placeholder="year"
@@ -114,7 +114,7 @@ export default function PaintingEdit() {
             <div className="form_items">
                 <label htmlFor="country">Origin Country :</label>
                 <textarea 
-                    id="country"
+                    id="country_of_origin"
                     value={painting.country_of_origin}
                     type="text"
                     placeholder="country"
@@ -138,7 +138,7 @@ export default function PaintingEdit() {
                 <input className="submit" type="submit" />
             </form>
             
-            <Link to={`/painting/${index}`}>
+            <Link to={`/paintings/${index}`}>
                 <button className="new">Nevermind!</button>
             </Link>
         </div>

@@ -29,9 +29,9 @@ const handleSearchChange = (e) => {
         <div className="Painting">
             <div>
                 <SearchBar 
-                searchGame={searchPainting}
+                searchPainting={searchPainting}
                 handleSearchChange={handleSearchChange}
-                setSearchGame={setSearchPainting}
+                setSearchPainting={setSearchPainting}
                 />
             </div>
             <section>
@@ -45,18 +45,7 @@ const handleSearchChange = (e) => {
                         ) : (
                 <div className="table-container">
                     <table className="table">
-                        {/* <thead>
-                            <tr>
-                                <th></th>
-                                <th>Name</th>
-                                <th>Painter</th>
-                                <th>Is Artist Alive</th>
-                                <th>Painting Year</th>
-                                <th>Origin Country</th>
-                                <th>Price</th>
-                            </tr>
-                        </thead> */}
-                        <tbody>
+                        
                             {filteredPainting.map((painting, index) => {
                                 return (
                                     <tr className="card" key={index}>
@@ -74,11 +63,11 @@ const handleSearchChange = (e) => {
                                         )}
                                         </td>
                                         <td>Country Of Origin: {painting.country_of_origin}</td>
-                                        <td style={{ textAlign: 'left' }}> Price:  {painting.price}</td>
+                                        <td> Price:  ${painting.price}</td>
                                     </tr>
                                 );
                             })}
-                        </tbody>
+                    
                     </table>
                 </div>
                 )}

@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital@1&family=Laila:wght@300;400&family=Roboto+Serif:ital,opsz,wght@1,8..144,100&family=Satisfy&family=Tilt+Prism&display=swap');
+
+.Home{
+    background:url("https://img.freepik.com/premium-vector/hand-painted-background-colourful-palette_23-2148427585.jpg");
+    background-repeat: no-repeat;
+    background-size: 1400px;
+    height: 700px;
+    padding-top: 10px;
+}
+
+
+.welcome{
+    text-align: center;
+    font-family: 'Tilt Prism', cursive;
+    font-size: 100px;
+}
+.view{
+    text-align: center;
+    font-family: 'Tilt Prism', cursive;
+}

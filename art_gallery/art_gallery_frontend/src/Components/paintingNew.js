@@ -1,7 +1,7 @@
 import React, { useState } from "react"; 
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-
+import "../CSS/PaintingNew.css"
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -23,7 +23,7 @@ export default function PaintingNew() {
       .post(`${API}/paintings`, newPainting)
       .then((response) => {
         setPainting(response.data);
-        navigate("/painting");
+        navigate("/paintings");
         window.location.reload();
       })
       .catch((e) => console.error(e));
@@ -37,7 +37,7 @@ export default function PaintingNew() {
 
   const handleCheckboxChange = () => {
     setPainting({ ...painting, is_painter_alive: !painting.is_painter_alive });
-    console.log(painting);
+    
   };
 
   const handleSubmit = (e) => {
@@ -51,11 +51,11 @@ export default function PaintingNew() {
       <h1> Add New Painting </h1>
       <form onSubmit={handleSubmit}>
       <div className="form_items">
-                <label htmlFor="img">Name:</label>
+                <label htmlFor="img">Image Url:</label>
                 <input
-                    id="img"
+                    id="image"
                     value={painting.image}
-                    type="url"
+                    type="text"
                     onChange={handleTextChange}
                     placeholder="Image"
                     required
@@ -75,56 +75,56 @@ export default function PaintingNew() {
             </div>
             <div className="form_items">
                 <label htmlFor="artist">Painter:</label>
-                <textarea 
-                    id="artist"
+                <input 
+                    id="artist_name"
                     value={painting.artist_name}
                     type="text"
-                    placeholder="Artist"
                     onChange={handleTextChange}
-                    required
+                    placeholder="Artist"
+                    
                 />
             </div>
             <div className="form_items">
                 <label htmlFor="art">Is The Aristist Alive</label>
                 <input 
-                    id="art"
+                    id="is_painter_alive"
                     type="checkbox"
                     onChange={handleCheckboxChange}
                     checked={painting.is_painter_alive}
-                    required
+                    
                 />
             </div>
             <div className="form_items">
                 <label htmlFor="year">Painting Created :</label>
-                <textarea 
-                    id="year"
+                <input 
+                    id="painting_year"
                     value={painting.painting_year}
                     type="text"
                     placeholder="year"
                     onChange={handleTextChange}
-                    required
+                   
                 />
             </div>
             <div className="form_items">
                 <label htmlFor="country">Origin Country :</label>
-                <textarea 
-                    id="country"
+                <input 
+                    id="country_of_origin"
                     value={painting.country_of_origin}
                     type="text"
                     placeholder="country"
                     onChange={handleTextChange}
-                    required
+                    
                 />
             </div>
             <div className="form_items">
                 <label htmlFor="price">Price:</label>
-                <textarea 
+                <input 
                     id="price"
                     value={painting.price}
                     type="text"
                     placeholder="price"
                     onChange={handleTextChange}
-                    required
+                   
                 />
             </div>
         <br />
@@ -132,7 +132,7 @@ export default function PaintingNew() {
           <input className="submit" type="submit" />
        
         <button className="new">
-          <Link to="/games">Nevermind!</Link>
+          <Link to="/paintings">Nevermind!</Link>
         </button>
         </div>
       </form>

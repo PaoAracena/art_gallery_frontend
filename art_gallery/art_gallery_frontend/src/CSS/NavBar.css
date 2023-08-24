@@ -1,0 +1,21 @@
+nav{
+    background-color: beige;
+}
+
+.logo{
+    border-radius: 4px;
+    width: 100px;
+}
+
+.logo :hover{
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+}
+.NewButton{
+    margin-left: 700px;
+    border-radius: 10px;
+    border-color: rgb(79, 195, 147);
+    font-weight: 600;
+}

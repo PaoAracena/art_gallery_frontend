@@ -1,23 +1,34 @@
-
+body{
+    background-color: rgb(235, 235, 209);;
+}
 
 .card{
     display: flex;
-    background: #dec1c1;
+    background: #eeeed2;
     margin: auto;
     padding: 15px 10px;
-    border: solid 3px gold;
+    border: ridge 10px rgba(255, 217, 0, 0.845);
     flex-direction: column;
-    flex-basis: 100%;
-    flex: 3;
-  
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    
   }
+
+
 img {
     border-radius: 4px;
-    width: 400px;
+    max-width: 400px;
+    max-height: 400px;
 }
 
 td{
     /* display: flex; */
     text-align: center;
     
+}
+
+.table{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
