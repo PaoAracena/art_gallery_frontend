@@ -4,7 +4,7 @@ import axios from "axios";
 
 //COMPONENTS
 import NavBar from './Components/NavBar';
-import Paintings from './Components/paintings';
+import Paintings from './Components/Paintings';
 
 //PAGES
 import Home from './Pages/Home';
