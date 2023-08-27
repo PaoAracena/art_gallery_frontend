@@ -1,0 +1,33 @@
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital@1&family=Laila:wght@300;400&family=Roboto+Serif:ital,opsz,wght@1,8..144,100&family=Satisfy&family=Tilt+Prism&display=swap');
+
+article{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .mark{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: ridge 10px rgba(255, 217, 0, 0.845);
+    margin: 30px;
+    padding: 25px;
+    color: rgb(44, 96, 186);
+    background-color:rgb(163, 223, 244);
+    box-shadow:rgb(135, 161, 173);
+
+  }
+  
+  .new{
+    display: flex;
+    align-items: center;
+    color: rgb(13, 14, 14);
+    margin-right: 20px;
+
+  }
+  

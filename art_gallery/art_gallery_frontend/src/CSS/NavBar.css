@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital@1&family=Laila:wght@300;400&family=Roboto+Serif:ital,opsz,wght@1,8..144,100&family=Satisfy&family=Tilt+Prism&display=swap');
+
 nav{
     background-color: beige;
 }
@@ -13,9 +15,12 @@ nav{
 a{
     text-decoration: none;
 }
-.NewButton{
-    margin-left: 700px;
+.logA{
+    display: flex;
+    /* margin-left: 700px; */
     border-radius: 10px;
     border-color: rgb(79, 195, 147);
     font-weight: 600;
+    justify-content: end;
 }
+

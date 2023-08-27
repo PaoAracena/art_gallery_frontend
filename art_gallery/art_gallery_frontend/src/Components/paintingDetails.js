@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
+import "../CSS/PaintingDetails.css"
 
 
 const API = process.env.REACT_APP_API_URL;
@@ -35,7 +36,7 @@ export default function PaintingDetails() {
   return (
     <article className="details">
       <div className="mark">
-        <h2>{painting.image}</h2>
+        <h2><img src={painting.image} className="card-img-top" alt={`${painting.painting}`} /></h2>
         <h3>{painting.name}</h3>
         <h5> By:{painting.artist_name}</h5>
         <h5>

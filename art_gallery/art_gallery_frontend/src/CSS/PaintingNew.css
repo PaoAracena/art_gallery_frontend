@@ -8,9 +8,9 @@
     margin: 30px;
     padding: 25px;
     font-family:Twinkle Star;
-    color: rgb(53, 41, 220);
+    color: rgb(8, 130, 26);
     background-color:rgb(168, 234, 204);
-    font-size: Homemade Apple;
+    
     
 }
 .form_items{
@@ -37,6 +37,6 @@
     align-items: center;
     justify-content: center;
     flex-direction:column;
-    margin-right: 600px;
+    /* margin-right: 900px; */
     margin-top: 20px;
 }

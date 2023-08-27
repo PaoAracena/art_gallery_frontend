@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import "../CSS/PaintingEdit.css"
 
 
 const API = process.env.REACT_APP_API_URL;
@@ -97,7 +98,7 @@ export default function PaintingEdit() {
                     type="checkbox"
                     onChange={handleCheckboxChange}
                     checked={painting.is_painter_alive}
-                    required
+                   
                 />
             </div>
             <div className="form_items">
@@ -135,7 +136,7 @@ export default function PaintingEdit() {
             </div>
                 <br />
 
-                <input className="submit" type="submit" />
+                <input className="form_items" type="submit" />
             </form>
             
             <Link to={`/paintings/${index}`}>
