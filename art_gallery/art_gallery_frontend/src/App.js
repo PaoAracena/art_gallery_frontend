@@ -4,13 +4,12 @@ import axios from "axios";
 
 //COMPONENTS
 import NavBar from './Components/NavBar';
-import Paintings from './Components/Paintings';
-
+import Paintings from './Components/paintings';
 
 //PAGES
 import Home from './Pages/Home';
 import New from  './Pages/New';
-import Index from "./Pages/Index";
+// import Index from "./Pages/Index";
 import Show from './Pages/Show';
 import Edit from './Pages/Edit';
 import FourOFour from './Pages/FourOFour';
